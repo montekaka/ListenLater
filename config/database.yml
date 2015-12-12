@@ -19,9 +19,3 @@ development:
 test:
   <<: *default
   database: db/test.sqlite3
-
-production:
-  <<: *default
-  database: listenlater_production
-  username: rails
-  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
