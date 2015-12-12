@@ -11,9 +11,7 @@ xml.rss "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-1.0.dtd",  "xmlns:
 				xml.enclosure :url=> item.audio_url, :type=>"audio/mp3"
 				xml.link item.producthunt_url
 				xml.guid item.audio_url
-				xml.image :image do
-					xml.image :loc, item.cover_image_url
-				end
+				xml.itunes :image, :href => item.cover_image_url
 			end
 		end	
 	end # end of xml.channel
