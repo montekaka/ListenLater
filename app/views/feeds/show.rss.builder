@@ -8,7 +8,7 @@ xml.rss "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-1.0.dtd",  "xmlns:
 				xml.title item.title
 				xml.description item.description
 				xml.pubDate item.created_at.to_s(:rfc822)
-				xml.enclosure :url=> item.audio_url
+				xml.enclosure :url=> item.audio_url, :type=>"audio/mp3"
 				xml.link item.producthunt_url
 				xml.guid item.audio_url
 				xml.image :image do
