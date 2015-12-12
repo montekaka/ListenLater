@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
   #resources :items
   #resources :feeds
-  resources :feeds do 
-    resources :items
-  end
+  resources :feeds, :only => ['index', 'show']
 
   root 'feeds#index'
   # The priority is based upon order of creation: first created -> highest priority.
