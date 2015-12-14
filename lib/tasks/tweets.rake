@@ -36,7 +36,9 @@ task :find_tweets => :environment do
 								item.producthunt_url = producthunt_post_url
 								item.tweet_id = tweet_id
 								feed.items << item
-								item.save!							
+								item.save!
+								feed_url = "https://huntcast.herokuapp.com/feeds/#{screen_name}"
+								$client.update("@screen_name now your can enjoy episodes on @Producthunt with @Overcastfm #{feed_url}")
 							else
 								# else we will create a new feed and save the show
 								p "create a new feed: #{screen_name}"
@@ -50,7 +52,7 @@ task :find_tweets => :environment do
 								item.producthunt_url = producthunt_post_url
 								item.tweet_id = tweet_id
 								feed.items << item
-								item.save!						
+								item.save!								
 							end
 						end
 					end				
