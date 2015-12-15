@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'twitter', '~> 5.15'
 gem 'nokogiri', '~> 1.6', '>= 1.6.7'
 gem 'friendly_id', '~> 5.1'
+gem 'open_uri_redirections'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
