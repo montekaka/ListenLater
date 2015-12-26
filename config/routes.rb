@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  root 'pages#home'
+
   #resources :items
   #resources :feeds
   resources :feeds, :only => ['index', 'show']
 
-  root 'feeds#index'
+  #root 'feeds#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
