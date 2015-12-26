@@ -11,9 +11,9 @@ xml.rss "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-1.0.dtd",  "xmlns:
 				xml.enclosure :url=> item.audio_url, :type=>"audio/mp3"
 				xml.link item.producthunt_url
 				xml.guid item.audio_url
-				#xml.itunes :image, :href => item.cover_image_url				
+				xml.itunes :image, :href => item.cover_image_url				
 				#xml.itunes :image, :href => "https://s3.amazonaws.com/podcastApp/shows/images/000/003/486/original/china.png?1441692711"
-				xml.image :href => "https://s3.amazonaws.com/podcastApp/shows/images/000/003/486/original/china.png?1441692711"
+				#xml.image :href => "https://s3.amazonaws.com/podcastApp/shows/images/000/003/486/original/china.png?1441692711"
 			end
 		end	
 	end # end of xml.channel
